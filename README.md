@@ -17,7 +17,7 @@ https://github.com/redwoodjs/redwood/commit/3d057db199487ea0b17240317d66ddde3f83
 
 If you want to use magic.link as your auth provider, we recommend that you
 first check to see if anyone has forked this repo (by using the
-[Network Graph](https://github.com/redwoodjs/magic.link/network)) and has an
+[Network Graph](https://github.com/redwoodjs/auth-magiclink/network)) and has an
 active fork. If not, you can fork this repo and publish the packages to NPM.
 That way, you and the rest of the community can keep using magic.link auth. You
 can also get the community's help keeping the magic.link auth integration
