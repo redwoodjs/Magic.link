@@ -1,10 +1,13 @@
 import fs from 'fs'
+import path from 'path'
 
 import { standardAuthHandler } from '@redwoodjs/cli-helpers'
 
 import { Args } from './setup'
 
-const { version } = JSON.parse(fs.readFileSync('../package.json', 'utf-8'))
+const { version } = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '../package.json'), 'utf-8')
+)
 
 export async function handler({ force: forceArg }: Args) {
   standardAuthHandler({
@@ -12,12 +15,12 @@ export async function handler({ force: forceArg }: Args) {
     forceArg,
     provider: 'magicLink',
     authDecoderImport:
-      "import { magicLinkAuthDecoder as authDecoder } from '@redwoodjs/auth-providers-api'",
+      "import { authDecoder } from '@redwoodjs/auth-magiclink-api'",
     apiPackages: [
-      `@redwoodjs/auth-providers-api@${version}`,
+      `@redwoodjs/auth-magiclink-api@${version}`,
       '@magic-sdk/admin',
     ],
-    webPackages: [`@redwoodjs/auth-providers-web@${version}`, 'magic-sdk'],
+    webPackages: [`@redwoodjs/auth-magiclink-web@${version}`, 'magic-sdk'],
     notes: [
       'To get your application keys, go to https://dashboard.magic.link/login ',
       'Then navigate to the API keys add them to your .env config options.',
