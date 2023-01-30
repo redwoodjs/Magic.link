@@ -23,7 +23,3 @@ That way, you and the rest of the community can keep using magic.link auth. You
 can also get the community's help keeping the magic.link auth integration
 maintained.
 
-Even though this package is not maintained, you can try it out by running
-`yarn rw setup auth @redwoodjs/auth-magiclink`. It may or may not work. Finding
-a fork of this repo that has published packages to NPM is a better choice. Just
-make sure you do your due diligence on their code before you start using it.
